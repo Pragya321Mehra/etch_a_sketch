@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<<<<<<< HEAD
     <script src="etchahelp.js" defer></script>
          <link rel="stylesheet" href="etchhelp.css">
 </head>
@@ -24,75 +23,5 @@
     </div>
    
 
-=======
-    <!-- <script src="etchahelp.js" defer></script> -->
-    <!-- <link rel="stylesheet" href="etchhelp.css"> -->
-</head>
-<body>
-    <style>
-        #grid{
-    display: flex;
-flex-direction: column;
-    
-
-}
-    </style>
-    <label for="squares">enter the number of squares</label>
-    <input type="text" name="" id="squares">
-    <button onclick=createGrid()>create grid</button>
-    <div id="grid">
-    </div>
-    <button onclick=clearGrid()>clear grid</button>
-<script>
-    function createGrid(){
-    let rows = document.getElementById("squares").value;
-    let grid = document.getElementById("grid");
-
-    grid.innerHTML = "";
-    let flag=0;
-            grid.addEventListener("mousedown",function(){
-             flag=1;
-            },false);
-            grid.addEventListener("mouseup",function(){
-             flag=0;
-            },false);
-
-    for (let i = 0; i < rows; i++){
-        let row = document.createElement("div");
-
-        row.className = "row";
-        row.style.width = "960px";
-        row.style.height = 960/rows + "px";
-        row.style.display = "flex";
-        for (var j = 0; j < rows; j++){
-            var cell = document.createElement("div");
-            cell.style.width = 960/rows + "px";
-            cell.style.height = 960/rows + "px";
-            cell.style.border = "1px solid black";
-            
-             
-            cell.className = "cell";
-           
-            cell.addEventListener("mouseover", function(){
-                  if(flag==1)
-                    this.style.backgroundColor = "gray";
-                
-    
-            },false);
-            row.appendChild(cell);
-        }
-        grid.appendChild(row);
-    }
-
-}
-function clearGrid(){
-    let cells = document.getElementsByClassName("cell");
-    for (let i = 0; i < cells.length; i++){
-        cells[i].style.backgroundColor = "white";
-    }
-}
-   
-</script>
->>>>>>> db91914785dc159165627e651a32b1891897f2bd
 </body>
 </html>
